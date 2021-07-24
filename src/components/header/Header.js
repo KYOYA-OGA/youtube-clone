@@ -7,6 +7,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import { AiOutlineSearch, AiFillYoutube } from 'react-icons/ai'
 import { MdNotifications, MdApps } from 'react-icons/md'
+import { useSelector } from 'react-redux'
 
 const Header = ({ handleToggleSidebar }) => {
   const [input, setInput] = useState('')
@@ -18,6 +19,8 @@ const Header = ({ handleToggleSidebar }) => {
 
     history.push(`/search/${input}`)
   }
+
+  const user = useSelector((state) => state.auth?.user)
   return (
     <div className="border border-dark header">
       <FaBars
@@ -44,11 +47,7 @@ const Header = ({ handleToggleSidebar }) => {
       <div className="header__icons">
         <MdNotifications size={28} />
         <MdApps size={28} />
-        <img
-          src="https://ttensports.com/wp-content/uploads/1982/02/person-placeholder.jpg"
-          alt="avatar"
-          className="header__icon"
-        />
+        <img src={user?.photoURL} alt="avatar" className="header__icon" />
       </div>
     </div>
   )

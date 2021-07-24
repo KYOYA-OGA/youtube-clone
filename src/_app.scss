@@ -1,3 +1,4 @@
+@import './base.scss';
 .app__container {
   display: flex;
   margin-top: 10vh;
@@ -5,4 +6,9 @@
 
 .app__main {
   width: 85% !important;
+}
+@media (max-width: $breakpoint-medium) {
+  .app__main {
+    width: 100% !important;
+  }
 }

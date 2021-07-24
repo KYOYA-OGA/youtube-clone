@@ -16,6 +16,7 @@ const Comments = ({ videoId, totalComments }) => {
   }, [dispatch, videoId])
 
   const comments = useSelector((state) => state.commentList.comments)
+  const { photoURL } = useSelector((state) => state.auth?.user)
 
   const _comments = comments?.map(
     (comment) => comment.snippet?.topLevelComment?.snippet
@@ -31,7 +32,7 @@ const Comments = ({ videoId, totalComments }) => {
       <p>{totalComments} Comments</p>
       <div className="comments__form d-flex w-100 my-2">
         <img
-          src="https://ttensports.com/wp-content/uploads/1982/02/person-placeholder.jpg"
+          src={photoURL}
           alt="avatar"
           className="rounded-circle me-3"
           width="50px"

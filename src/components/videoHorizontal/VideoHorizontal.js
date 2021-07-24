@@ -60,7 +60,7 @@ const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
   }, [channelId])
 
   const history = useHistory()
-  const _channelId = resourceId.channelId || channelId
+  const _channelId = resourceId?.channelId || channelId
   const handleClick = () => {
     isVideo
       ? history.push(`/watch/${id.videoId}`)
@@ -113,7 +113,7 @@ const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
           {isVideo && <LazyLoadImage src={channelIcon?.url} effect="blur" />}
           <p className="mb-0">{channelTitle}</p>
         </div>
-        {<p className="mt-2">{video.contentDetails.totalItemCount} videos</p>}
+        {<p className="mt-2">{video?.contentDetails?.totalItemCount} videos</p>}
       </Col>
     </Row>
   )

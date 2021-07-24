@@ -17,6 +17,9 @@ $breakpoint-small: 520px;
 a {
   color: inherit;
   text-decoration: none;
+  &:hover {
+    color: inherit;
+  }
 }
 
 body {
