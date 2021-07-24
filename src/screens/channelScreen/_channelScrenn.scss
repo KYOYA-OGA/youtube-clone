@@ -1,0 +1,30 @@
+@import '../../_base.scss';
+
+.channelHeader {
+  border-bottom: 1px solid $border-color;
+
+  button {
+    text-transform: uppercase;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.4rem;
+    border: none;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .channelHeader {
+    padding: 1rem 0;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}

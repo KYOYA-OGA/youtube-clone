@@ -1,0 +1,21 @@
+@import '../../base';
+.comments__form {
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $border-color;
+    color: #fff;
+    &:focus {
+      outline-color: $border-color;
+    }
+  }
+  button {
+    background-color: #353946;
+    color: #fff;
+    letter-spacing: 0.5px;
+    &:focus {
+      border: none;
+      outline-color: $border-color;
+    }
+  }
+}
